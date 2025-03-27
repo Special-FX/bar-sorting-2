@@ -1,4 +1,3 @@
-/*
 public class Step { //my code (doesn't work)
     //constants
     public static final int COMPARE = 0;
@@ -7,7 +6,9 @@ public class Step { //my code (doesn't work)
     public static final int TOBARS = 4;
 
     //fields
-    private int index1, index2, type;
+    private final int index1;
+    private final int index2;
+    private final int type;
 
     //constructor
     public Step(int index1, int index2, int type) {
@@ -17,11 +18,11 @@ public class Step { //my code (doesn't work)
     }
 
     //methods
-    public int getIndex2() {
+    public int getIndex1() {
         return index1;
     }
 
-    public int getIndex1() {
+    public int getIndex2() {
         return index2;
     }
 
@@ -29,16 +30,16 @@ public class Step { //my code (doesn't work)
         return type;
     }
 }
-*/
 
-public class Step { //jackson's code (works even though they're literally the same)
+/*
+public class Step { //alt code
     //constants
     public static final int COMPARE = 0;
     public static final int SWAP = 1;
     public static final int TOBUFFER = 3;
     public static final int TOBARS = 4;
 
-    //fields;
+    //fields
     private int index1, index2, type;
 
     //constructors
@@ -59,3 +60,4 @@ public class Step { //jackson's code (works even though they're literally the sa
         return type;
     }
 }
+*/

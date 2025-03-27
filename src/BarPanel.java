@@ -9,6 +9,7 @@ public class BarPanel extends JPanel {
     // constants
     private static final int STEPSIZE = 30;
 
+
     // fields
     private ArrayList<Bar> bars;
     private LayoutPanel layoutP;
@@ -16,6 +17,7 @@ public class BarPanel extends JPanel {
     int stepCounter;
     ArrayList<Bar> startBars;
     ArrayList<Bar> buffer;
+
 
     // constructor
     public BarPanel(LayoutPanel lp) {
@@ -26,6 +28,7 @@ public class BarPanel extends JPanel {
         this.startBars = new ArrayList<Bar>();
         this.buffer = new ArrayList<Bar>();
     }
+
 
     // bar methods
     public void addBar() {
@@ -62,6 +65,7 @@ public class BarPanel extends JPanel {
         drawStepMark(g);
     }
 
+
     // sorting methods
     public void bubbleSort() {
         if(bars.isEmpty()) return;
@@ -90,6 +94,7 @@ public class BarPanel extends JPanel {
         this.repaint();
     }
 
+
     public void selectionSort() {
         if(bars.isEmpty()) return;
 
@@ -112,6 +117,7 @@ public class BarPanel extends JPanel {
         restoreStart();
         this.repaint();
     }
+
 
     public void insertionSort() {
         if(bars.isEmpty()) return;
@@ -136,6 +142,7 @@ public class BarPanel extends JPanel {
         restoreStart();
         this.repaint();
     }
+
 
     public void mergeSort() {
         clearSteps();
@@ -210,6 +217,7 @@ public class BarPanel extends JPanel {
         }
     }
 
+
     public void bogoSort() {
         if(bars.isEmpty()) return;
 
@@ -232,9 +240,11 @@ public class BarPanel extends JPanel {
             if(sortedCount == arr.length) unsorted = false;
             this.repaint();
         }
+        restoreStart();
         this.repaint();
 */
     }
+
 
     // auxiliary methods
     private void swapBar(int index1, int index2) {
@@ -319,6 +329,7 @@ public class BarPanel extends JPanel {
 
     private void drawBuffer(Graphics g) {
         for (int i = 0; i < buffer.size(); i++) {
+
             Bar b = buffer.get(i);
             if (b == null) continue;
             else {
